@@ -15,9 +15,11 @@ public class Member {
     @Column(name = "member_id")
     private Long id;
 
-    private String username;
+    private String oauthId;
     private String email;
-    private String password;
+    private String name;
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
     @OneToOne
     @JoinColumn(name = "profile_id")
